@@ -1,0 +1,25 @@
+ABASTECE+ — PROTÓTIPO FUNCIONAL
+
+Conteúdo:
+- index.html: aplicativo responsivo em português
+- manifest.json: configuração para instalação como aplicativo web (PWA)
+- sw.js: cache básico para abrir offline após a primeira visita
+
+Como testar:
+1. Abra index.html no navegador para testar as funções principais. O armazenamento local funciona no navegador.
+2. Para instalar como PWA no Android/iPhone, publique a pasta em um site com HTTPS (ou execute num servidor local seguro). No Android use o menu do navegador > Instalar aplicativo/Adicionar à tela inicial. No iPhone abra no Safari > Compartilhar > Adicionar à Tela de Início.
+3. Os dados ficam no armazenamento local do navegador/aparelho; não existe sincronização entre aparelhos ou conta na nuvem nesta primeira versão. Use Relatórios > Baixar backup para guardar os dados.
+
+Funções implementadas:
+- Cadastro de múltiplos veículos (moto, carro ou outro)
+- Registro de abastecimentos, data, odômetro, litros, preço, valor, combustível, posto, tanque cheio/parcial e observações
+- Painel de gastos do mês, último abastecimento, consumo estimado e custo por km
+- Histórico filtrável por veículo e tipo de combustível, exclusão de registros e exportação CSV
+- Relatórios separados por combustível, com gasto total, litros, quantidade de abastecimentos e preço médio por litro
+- Relatório de gastos por mês, backup/restauração JSON
+- Tema automático conforme o sistema operacional
+
+Limites conhecidos:
+- É um protótipo local, sem login, sincronização em nuvem, notificações ou integração com postos.
+- O cálculo km/L é estimado entre registros e considera os litros do abastecimento atual quando marcado tanque cheio; para maior precisão, registre consistentemente os abastecimentos com tanque cheio.
+- Para publicação oficial nas lojas Google Play e App Store, será necessário empacotamento, ícones, testes em dispositivos e configuração de contas de desenvolvedor.
